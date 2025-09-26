@@ -449,7 +449,6 @@ class GenericsTest extends KryoTestCase {
 			
 		}
 
-
 		public static class MapKey {
 			public String field1, field2;
 
