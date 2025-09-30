@@ -441,12 +441,13 @@ class GenericsTest extends KryoTestCase {
 			List<String> list = new ArrayList<>();
 			for (Set<String> set : other.values.values()) {
 				list_other = new ArrayList<>(set); 
+				list_other.sort(Comparator.naturalOrder());
 			}
 			for (Set<String> set : values.values()) {
 				list = new ArrayList<>(set); 
+				list.sort(Comparator.naturalOrder());
 			}			
 			return Objects.equals(other.values.keySet().toString(), values.keySet().toString()) && Objects.equals(list_other, list);
-			
 		}
 
 		public static class MapKey {
